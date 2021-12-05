@@ -3,4 +3,4 @@
 all: docker
 
 docker:
-	docker build --pull -t compris .
+	docker build --pull -t copris .
