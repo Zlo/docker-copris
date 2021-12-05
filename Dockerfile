@@ -14,8 +14,11 @@ RUN curl -o /tmp/scala.deb https://downloads.lightbend.com/scala/2.12.15/scala-2
  && rm -f /tmp/scala.deb
 
 RUN cd /opt \
+ && mkdir work \
  && git clone https://gitlab.com/cspsat/prog-copris.git \
  && cd prog-copris/examples \
  && scalac -cp ../build/copris-all_2.12-2.3.2.jar Examples.scala
 
 COPY install/. /.
+
+WORKDIR /work
