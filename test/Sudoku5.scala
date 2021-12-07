@@ -1,6 +1,7 @@
 /*
  * This program is a part of Copris software package.
  * http://bach.istc.kobe-u.ac.jp/copris/
+ * Adapted by Zlo for a 5-way sudoku.
  */
 
 import jp.kobe_u.copris._
