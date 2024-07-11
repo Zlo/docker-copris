@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
-ENV DEBIAN_FRONTEND "noninteractive"
+ENV DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get update \
  && apt-get -y upgrade \
@@ -9,7 +9,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf -- /tmp/* /var/lib/apt/lists/*
 
-RUN curl -o /tmp/scala.deb https://downloads.lightbend.com/scala/2.12.15/scala-2.12.15.deb \
+RUN curl -o /tmp/scala.deb https://downloads.lightbend.com/scala/2.12.19/scala-2.12.19.deb \
  && dpkg -i /tmp/scala.deb \
  && rm -f /tmp/scala.deb
 
