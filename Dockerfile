@@ -9,7 +9,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf -- /tmp/* /var/lib/apt/lists/*
 
-RUN curl -o /tmp/scala.deb https://downloads.lightbend.com/scala/2.12.19/scala-2.12.19.deb \
+RUN curl -Lo /tmp/scala.deb https://github.com/scala/scala/releases/download/v2.12.21/scala-2.12.21.deb \
  && dpkg -i /tmp/scala.deb \
  && rm -f /tmp/scala.deb
 
